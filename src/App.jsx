@@ -5,6 +5,7 @@ import Error from "./pages/Error/index.jsx";
 import Footer from "./components/Footer/index.jsx";
 import AboutUs from "./pages/AboutUs/AboutUs.jsx";
 import Gallery from "./pages/Properties/index.jsx";
+import './App.scss';
 
 
 function App() {

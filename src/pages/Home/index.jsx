@@ -1,12 +1,11 @@
-
+import Banner from "../../components/Banner";
 
 
 
 function Home() {
     return ( 
     <div>
-    
-    <p>i am the home page </p>
+    <Banner />;
 
    
     </div>

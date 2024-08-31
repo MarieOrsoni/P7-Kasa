@@ -1,0 +1,27 @@
+.navbar {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    flex-wrap: nowrap;
+    height: 70px;
+    max-width: 1240px;
+    position: relative;
+   
+    .logo {
+        position: absolute;
+        left: 50px;
+    }
+}
+.navbar a {
+    margin-left: 50px;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 500;
+    color: black;
+    &:hover {
+        text-decoration-line: underline;
+        text-decoration-style: 1px ;
+        //need to change to box padding liner color
+    }
+}
+    
