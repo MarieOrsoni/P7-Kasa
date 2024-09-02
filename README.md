@@ -1,5 +1,14 @@
 # React + Vite
 
+To start the app from the terminal:
+npm run dev
+
+To stop app:
+ctr + C then select: y (yes)
+
+Note: Vite does not use Switch but Routes and Links.
+
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
