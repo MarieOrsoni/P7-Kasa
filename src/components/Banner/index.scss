@@ -4,14 +4,14 @@
     align-items: center;
     margin-top: 50px;
     max-width: 1240px;
-    left: 50px;
-    right:50px;
-    
+    margin-left: auto;
+    margin-right: auto;
     height: 240px;
     background-color: black;
     border-radius: 25px;
     position: relative;
-    p {
+}
+   .banner p {
         font-size: 48px;
         font-weight: 700;
         color: white;
@@ -21,7 +21,7 @@
     
     }
    
-}
+
 
 .bannerimg {
     height: 240px;
@@ -33,15 +33,6 @@
     border: 1px;
     box-shadow: 0px 4px 4px 0px #00000040;
    
-}
-p {
-    font-size: 48px;
-    font-weight: 700;
-    color: white;
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-
 }
 
 

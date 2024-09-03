@@ -20,8 +20,8 @@ function App() {
       <Route path="/Properties" element={<Gallery />}></Route>
       <Route path="/Error" element={<Error />}></Route>
       
-      
       </Routes>
+      <Footer />
       </BrowserRouter>
       
   );
