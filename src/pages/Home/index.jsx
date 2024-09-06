@@ -1,5 +1,6 @@
 import Banner from "../../components/Banner";
-import Footer from "../../components/Footer";
+
+import Gallery from "../../components/Gallery";
 
 
 
@@ -7,7 +8,8 @@ function Home() {
     return ( 
     <div>
     <Banner />
-    <Footer />
+    <Gallery />
+    
     </div>
    
 
