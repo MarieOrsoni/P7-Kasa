@@ -2,6 +2,7 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useState, useEffect } from 'react';
 import Properties from '../data/Properties.json';
+import { Link } from 'react-router-dom';
 import "./index.scss"
 
 function PropertyData() {
@@ -27,11 +28,11 @@ function PropertyData() {
     return (
         <div className='gallery'>
             {data.map(post => (
-                <div className='thumb' key={post.id}>
+                <Link to ={`/accommodation/${post.id}`} key={post.id} className='thumb'>
                    <img src={post.cover} alt={post.title} />
                     <p>{post.title}</p>
                     
-                </div>
+                </Link>
             ))}
         </div>
     );

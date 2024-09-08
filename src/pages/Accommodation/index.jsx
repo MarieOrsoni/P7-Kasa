@@ -1,10 +1,12 @@
-import Accommodation from "../../components/Accommodation";
 
-function propertyDetails() {
+
+import AccommodationDetails from "../../components/Accommodation";
+
+function PropertyDetails() {
     return (
         <div>
-            <Accommodation />
+            <AccommodationDetails />
         </div>
     )
 }
-export default propertyDetails;
+export default PropertyDetails;
