@@ -5,7 +5,7 @@ import properties from "../data/Properties.json";
 import React, { useState } from "react";
 import "./index.scss"
 
-//Carousel
+//Carousel Back up Gallery code!
 
 const Gallery = () => {
     const [currentIndex, setCurrentIndex] = useState(0);

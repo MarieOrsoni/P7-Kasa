@@ -1,16 +1,16 @@
 import Banner from "../../components/Banner";
+import Portfolio from "../../components/Portfolio";
 
-import Gallery from "../../components/Gallery";
 
 
 
 function Home() {
     return ( 
-    <div>
+    <main>
     <Banner />
-    <Gallery />
+    <Portfolio />
     
-    </div>
+    </main>
    
 
     );  

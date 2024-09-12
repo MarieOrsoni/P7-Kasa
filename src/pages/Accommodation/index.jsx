@@ -1,12 +1,13 @@
-
+import Gallery from "../../components/Gallery";
 
 import AccommodationDetails from "../../components/Accommodation";
 
 function PropertyDetails() {
     return (
-        <div>
+        <main>
+            <Gallery />
             <AccommodationDetails />
-        </div>
+        </main>
     )
 }
 export default PropertyDetails;

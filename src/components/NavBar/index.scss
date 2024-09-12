@@ -1,21 +1,9 @@
 .navbar {
     display: flex;
-    flex-direction: row-reverse;
-    align-items: flex-end;
-    flex-wrap: nowrap;
-    height: 70px;
-    max-width: 1240px;
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-   
-    .logo {
-        position: absolute;
-        left: 50px;
-    }
+    
 }
 .navbar a {
-    margin-left: 50px;
+    padding-left: 50px;
     text-decoration: none;
     font-size: 24px;
     font-weight: 500;
