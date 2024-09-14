@@ -1,25 +1,31 @@
 //Accommodation data
-// eslint-disable-next-line no-unused-vars
-import React, { useState, useEffect} from "react";
-import Properties from '../../components/data/Properties.json';
+import { useState, useEffect} from "react";
 import Rating from "../Ratings";
 import { useParams } from 'react-router-dom';
 import './index.scss';
+import DropdownList from "../DropdownList";
 
 
 function AccommodationDetails() {
     const { id } = useParams();
-    
     const [property, setProperty] = useState(null);
     const [tags, setTags] = useState([]);
 
     useEffect(() => {
-       
-        const foundProperty = Properties.find((items) => items.id === id);
-        setProperty(foundProperty);
+       const fetchData = async () => {
+        try {
+            const response = await fetch('/Properties1.json');
+            const result = await response.json();
+            const foundProperty = result.find((items) => items.id === id);
+            setProperty(foundProperty);
                 if ( foundProperty && foundProperty.tags) {
                 setTags(foundProperty.tags);
-            }
+        }
+       } catch (error) {
+        console.error('Error fetching properties1:', error);
+       }
+    };
+    fetchData();    
                 
     }, [id]);
 
@@ -29,23 +35,25 @@ function AccommodationDetails() {
     const listItems = tags.map((tag, index) => <li key={index}>{tag}</li>
 );
    const name = property.host.name.split(' '); 
-   console.log(name);
+   
     return (
               
-                <div>
-            
+                <div className="titles">
                     <h1>{property.title}</h1>
                     <p>{property.location}</p>
-                    <div className="host">
-                    <div className="name">
-                    <span>{name[0] }</span>
-                    <span> {name[1] }</span>
+                    <div className="hostInfo">
+                    <div className="names">
+                    <p>{name[0] }</p>
+                    <p> {name[1] }</p>
                     </div>
+                
                     <img src={property.host.picture} alt="Hote" />
                     </div>
-
                     <Rating rating={property.rating} />
-                    <ul>{listItems}</ul>                  
+                    <ul className="tags">{listItems}</ul> 
+                    <div className="dropdown-list">
+                    <DropdownList />
+                    </div>                
                 </div>
             );
 }
