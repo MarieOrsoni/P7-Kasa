@@ -1,11 +1,11 @@
 import arrow_left from "../../assets/arrow_left.png";
 import arrow_right from "../../assets/arrow_right.png";
 import { useEffect, useState } from "react";
-import "./index.scss"
+import "./carousel.scss"
 
 //Carousel
 
-const Gallery = () => {
+const Carousel = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [pictures, setPictures] = useState([]);
     
@@ -47,4 +47,4 @@ const Gallery = () => {
         </div>
     );
 }
-export default Gallery;
+export default Carousel;

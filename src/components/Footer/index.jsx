@@ -1,5 +1,5 @@
 import LogoWhite from '../../assets/LogoWhite.png'
-import './index.scss'
+import './footer.scss'
 
 function Footer() {
     return (       

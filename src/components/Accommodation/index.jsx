@@ -1,9 +1,13 @@
 //Accommodation data
+//Data extracted from the json file for the selected property 
+
 import { useState, useEffect} from "react";
 import Rating from "../Ratings";
 import { useParams } from 'react-router-dom';
-import './index.scss';
-import DropdownList from "../DropdownList";
+import './accommodation.scss';
+
+import DropdownEquipments from "../DropdownEquipment";
+import DropdownDescription from "../DropdownDescription";
 
 
 function AccommodationDetails() {
@@ -37,23 +41,27 @@ function AccommodationDetails() {
    const name = property.host.name.split(' '); 
    
     return (
-              
+              <div className="accommodation-details">
                 <div className="titles">
                     <h1>{property.title}</h1>
                     <p>{property.location}</p>
-                    <div className="hostInfo">
+
+                    <div className="host-info">
                     <div className="names">
                     <p>{name[0] }</p>
                     <p> {name[1] }</p>
                     </div>
-                
-                    <img src={property.host.picture} alt="Hote" />
+                    <img className="host-photo" src={property.host.picture} alt="Hote" />
                     </div>
-                    <Rating rating={property.rating} />
+                    
                     <ul className="tags">{listItems}</ul> 
+                    <Rating rating={property.rating} />
+
                     <div className="dropdown-list">
-                    <DropdownList />
+                    <DropdownDescription />
+                    <DropdownEquipments />
                     </div>                
+                </div>
                 </div>
             );
 }

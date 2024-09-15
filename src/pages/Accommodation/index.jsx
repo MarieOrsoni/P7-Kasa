@@ -1,12 +1,16 @@
-import Gallery from "../../components/Gallery";
+//Page des details de chaque logements
+//Page for individual accommodation details 
 
 import AccommodationDetails from "../../components/Accommodation";
+import Carousel from "../../components/Carousel";
 
 function PropertyDetails() {
     return (
         <main>
-            <Gallery />
+            <Carousel />
+        
             <AccommodationDetails />
+        
         </main>
     )
 }

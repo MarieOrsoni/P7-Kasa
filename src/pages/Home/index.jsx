@@ -1,14 +1,13 @@
 import Banner from "../../components/Banner";
-import Portfolio from "../../components/Portfolio";
-
-
+import PortfolioGallery from "../../components/Portfolio";
 
 
 function Home() {
     return ( 
     <main>
     <Banner />
-    <Portfolio />
+    <PortfolioGallery />
+   
     
     </main>
    

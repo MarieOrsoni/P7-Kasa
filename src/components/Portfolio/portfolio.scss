@@ -10,18 +10,18 @@
     margin-top: 50px;
     margin-bottom: 50px;
 }
-.thumb {
+.card {
     position: relative;
     padding: 20px;
 }
-.thumb img {
+.card img {
     position: relative;
     height: 340px;
     max-width: 100%;
     border-radius: 10px;
     object-fit: cover;
 }
-.thumb p {
+.card p {
     position:absolute;
     bottom: 30px;
     left: 40px;

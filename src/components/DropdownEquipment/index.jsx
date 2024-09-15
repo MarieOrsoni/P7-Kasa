@@ -1,13 +1,14 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import './index.scss';
+import './dropdown.scss';
+import CollapsibleList from '../Collapsible/index.jsx';
 
 //Dropdown list of equipment
 
-const DropdownList = () => {
+const DropdownEquipments = () => {
     const { id } = useParams();
     const [options, setOptions] = useState([]);
-    const [isOpen, setIsOpen] = useState(false);
+   // const [isOpen, setIsOpen] = useState(false);
     const [error, setError] = useState(null);
 
     useEffect(() => {
@@ -23,7 +24,7 @@ const DropdownList = () => {
              //   console.log('Fetched data:', data); // Log the fetched data
                 const property = data.find(item => item.id === id);
                 if (property && property.equipments) {
-                    console.log('Equipments:', property.equipments); // Log the equipments array
+                 //   console.log('Equipments:', property.equipments); // Log the equipments array
                     setOptions(property.equipments);
                 } else {
                     console.warn('No equipments found for the property with id:', id);
@@ -35,18 +36,16 @@ const DropdownList = () => {
             });
     }, [id]);
 
-    const toggleDropdown = () => setIsOpen(!isOpen);
+   // const toggleDropdown = () => setIsOpen(!isOpen);
 
     if (error) {
         return <div>Error loading data: {error.message}</div>;
     }
 
     return (
-        <div className="dropdown">
-            <i className="fa-solid fa-chevron-up" onClick={toggleDropdown} id="dropdown-toggle"></i>
-            {isOpen && (
-                <ul className="dropdown-menu">
-                    {Array.isArray(options) && options.length > 0 ? ( options.map((option, index)=> (
+        <CollapsibleList title='Équipements'>
+     
+            {Array.isArray(options) && options.length > 0 ? ( options.map((option, index)=> (
                         <li key={index} className='dropdown-item'>
                         {option}
                     </li>
@@ -54,11 +53,11 @@ const DropdownList = () => {
                 ) : (
                     <li className='dropdown-item'>No options available</li>
                 )}
-                </ul>
+                </CollapsibleList>
+              
             )}
-        </div>
-    );
-};
+    
 
-export default DropdownList;
+
+export default DropdownEquipments;
 

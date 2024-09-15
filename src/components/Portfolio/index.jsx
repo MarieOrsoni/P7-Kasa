@@ -1,11 +1,38 @@
-import PropertyData from "../PropertiesData";
+//Portfolio of all accommodations available 
+//Gallery of accommodations for the home page
 
-function Portfolio () {
+import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import "./portfolio.scss"
+
+function PortfolioGallery() {
+   const [data, setData] = useState([]);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const response = await fetch('/Properties1.json');
+                const result = await response.json();
+                setData(result);
+            } catch (error) {
+                console.error('Error fetching properties:', error);
+            }
+        };
+                fetchData();
+
+        }, []);
+
     return (
-        <div>
-            <PropertyData />
+        <div className='gallery'>
+            {data.map(post => (
+                <Link to ={`/accommodation/${post.id}`} key={post.id} className='card'>
+                   <img src={post.cover} alt={post.title} />
+                    <p>{post.title}</p>
+                    
+                </Link>
+            ))}
         </div>
-
     );
 }
-export default Portfolio;
+
+export default PortfolioGallery;

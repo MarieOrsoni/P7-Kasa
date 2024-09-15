@@ -1,12 +1,10 @@
+import Error from "../../components/Error/index.jsx";
 
-
-function Error () {
+function Error404 () {
     return ( 
-    <div> 
-
-    <h1>404</h1>
-    <p>Oups! La page que vous demandez nexiste pas.</p>
-    </div>
+    <main> 
+   <Error />
+    </main>
     );
 };
-export default Error;
+export default Error404;

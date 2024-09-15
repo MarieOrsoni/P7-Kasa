@@ -1,6 +1,6 @@
 
 import PropTypes from 'prop-types';
-import "./index.scss";
+import "./rating.scss";
 
 const Rating = ({ rating }) => {
     const stars = Number(rating);
