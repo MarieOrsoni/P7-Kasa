@@ -1,6 +1,8 @@
+@import '../../styles/variables.scss';
+
 .red-star {
-    color: red;
+    color: $red-maincolor;
 }
-.gray-star {
-    color: gray;
+.grey-star {
+    color: $grey-star;
 }

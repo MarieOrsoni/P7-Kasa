@@ -1,3 +1,5 @@
+@import '../../styles/variables.scss';
+
 .carousel {
     height: 415px;
     position: relative;
@@ -5,7 +7,7 @@
     margin-left: auto;
     margin-right: auto;
     margin-top: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     text-align: center;
    
 }
@@ -22,7 +24,7 @@ position: relative;
 .arrow {
     position: absolute;
     top: 40%;
-    height: 110px;
+    height: 80px;
     cursor: pointer;
     z-index: 1;
     
@@ -37,7 +39,7 @@ position: relative;
     position: absolute;
     bottom: 20px;
     left: 50%;
-    color: rgba(255, 255, 255, 1);
+    color: $white-theme;
     font-size: 18px;
    
 }

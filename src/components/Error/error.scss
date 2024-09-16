@@ -1,0 +1,26 @@
+@import '../../styles/variables.scss';
+
+.error {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    h1 {
+        color: $red-maincolor;
+        font-size: 288px;
+        font-weight: 700;
+        margin-bottom: 50px;    
+        margin-top: 50px;   
+    }
+    p {
+        color: $red-maincolor;
+        font-size: 36px;
+        font-weight: 500;
+    }
+
+}
+.alink {
+    font-size: 18px;
+    color: black;
+    
+}

@@ -2,15 +2,11 @@
 
 $red-maincolor: rgba(255, 96, 96, 1);
 
-$white-titles: rgba(255, 255, 255, 1);
+$white-theme: rgba(255, 255, 255, 1);
+
+//Rating unselected - grey
+$grey-star: rgba(227, 227, 227, 1);
 
 
-// _mixins.scss
-@mixin font-dropdown-titles {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 24px;
-    font-weight: 700;
-    text-align: left;
-  }
  
   

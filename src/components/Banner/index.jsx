@@ -1,13 +1,21 @@
-import imagesource1 from '../../assets/imagesource1.png';
-import './banner.scss'
+import './banner.scss';
+import PropTypes from 'prop-types';
 
-function Banner () {
+function Banner ({ imageSrc, altText, children }) {
     return (
         <div className='banner'>
-        <img className="bannerimg" src={imagesource1} alt="paysage cotier"/>
-        <p>Chez vous, partout et ailleurs</p>
+        <img className="bannerimg" src={imageSrc} alt={altText} />
+        {children}
          
         </div>
     );
 }
+
+
+Banner.propTypes = {
+    imageSrc: PropTypes.string.isRequired,
+    altText: PropTypes.string.isRequired,
+    children: PropTypes.node
+};
+
 export default Banner;

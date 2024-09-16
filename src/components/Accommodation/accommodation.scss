@@ -4,12 +4,12 @@
     max-width: 1240px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 50px;
     margin-bottom: 50px;
     position: relative;
 }
 //Title and location
 .titles {
+    width: 60%;
     h1 { 
     color: $red-maincolor;
     margin-bottom: 0;
@@ -23,18 +23,29 @@
     position: absolute;
     right: 0;
     top: 10px;
+    p {
+        margin: 0;
+        color: $red-maincolor;
+    }
 
+}
+.names {
+    display: flex;
+    flex-direction: column;
+    padding-right: 10px;
+    justify-content: center;
+    text-align: right;
 }
 .host-photo {
     border-radius: 50%;
 }
+
 
 //Tags div
 .tags {
     margin-left: 0;
     padding-left: 0;
     list-style: none;
-    width: 50%;
     display: flex;
     gap: 20px;
     li {
@@ -42,6 +53,8 @@
         color: white;
         border-radius: 10px;
         padding: 8px 20px;
+        font-size: 14px;
+        font-weight: 700;
     }
 }
 
@@ -50,13 +63,17 @@
 .rating-container {
         position: absolute;
         right: 0;
+        top:100px;
     }
+
+
 //Dropdowns div
 .dropdown-list {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    gap: 10%;
+    margin-top: 30px;
+    gap: 5%;
 
 }
 

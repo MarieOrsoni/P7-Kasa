@@ -7,8 +7,8 @@ function CollapsibleList({ title, children }) {
   const { getCollapseProps, getToggleProps, isExpanded } = useCollapse();
 
   return (
-    <div className={`collapsible-list ${isExpanded ? 'collapsible--active' : ''}`}>
-      <button {...getToggleProps()} className="collapsible__header">
+    <div className={`collapsible-list ${isExpanded ? 'collapsible-list--active' : ''}`}>
+      <button {...getToggleProps()} className={`collapsible__header ${isExpanded ? 'collapsible__header--active' : ''}`}>
         {title} <i className={`fas fa-chevron-up ${isExpanded ? 'rotate' : ''}`}></i>
       </button>
       <div {...getCollapseProps()} className="collapsible__content">
