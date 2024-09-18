@@ -11,7 +11,20 @@
     &:hover {
         text-decoration-line: underline;
         text-decoration-style: 1px ;
-        //need to change to box padding liner color
+       
     }
 }
-    
+    //media queries 
+@media (max-width: 768px) {
+    .navbar a {
+        font-size: 18px;
+        padding-left: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar a {
+        font-size: 18px;
+        padding-left: 20px;
+    }
+}

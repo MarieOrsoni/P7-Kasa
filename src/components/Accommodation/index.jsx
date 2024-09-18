@@ -8,7 +8,7 @@ import './accommodation.scss';
 
 import DropdownEquipments from "../DropdownEquipment";
 import DropdownDescription from "../DropdownDescription";
-
+import HostInfo from "../Host-info";
 
 function AccommodationDetails() {
     const { id } = useParams();
@@ -45,25 +45,24 @@ function AccommodationDetails() {
     }
     const listItems = tags.map((tag, index) => <li key={index}>{tag}</li>
 );
-   const name = property.host.name.split(' '); 
-   
+      
     return (
               <div className="accommodation-details">
+                
                 <div className="titles">
                     <h1>{property.title}</h1>
                     <p>{property.location}</p>
                 </div>
 
-                <div className="host-info">
-                    <div className="names">
-                    <p>{name[0] }</p>
-                    <p> {name[1] }</p>
-                    </div>
-                    <img className="host-photo" src={property.host.picture} alt="Hote" />
-                    <Rating rating={property.rating} />
-                    </div>
+                <div className="host-info-rating">
+                  <HostInfo fullName={property.host.name} picture={property.host.picture} />
+                  <Rating rating={property.rating} />
+                </div>
+
+                
                     
                     <ul className="tags">{listItems}</ul> 
+                    
                     
                     <div className="dropdown-list">
                     <DropdownDescription />

@@ -29,7 +29,7 @@
   }
 
   .rotate {
-    transform: rotate(180deg);
+    transform: rotate(-180deg);
     transition: transform 0.3s ease;
   }
 }
@@ -54,7 +54,26 @@
 
 .collapsible__header--active {
   background-color: $red-maincolor;
+
   
-  
+}
+//media queries
+@media (max-width: 768px) {
+
+}
+@media (max-width: 480px) {
+  .collapsible__header {
+    font-size: 13px;
+    height: 30px;
+    width: 100%;
+  }
+  .collapsible-list {
+    p, li {
+      font-size: 14px;
+    }  
+  }
+  .collapsible__header--active {
+    width: 100%;
+  }
 }
   

@@ -33,3 +33,21 @@
     width: 70%;
     color: $white-theme;
 }
+//media queries
+@media (max-width: 768px) {
+
+}
+@media (max-width: 480px) {
+    .gallery {
+        background: none;
+       max-width: 335px;
+        grid-template-columns: 1fr;
+        padding: 0;
+        margin-top: 0px;
+    }
+    .card {
+        padding: 0;
+        margin-top: 20px;
+    }
+
+}

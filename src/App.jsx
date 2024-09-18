@@ -13,6 +13,7 @@ import './styles/App.scss'
 
 function App() {
   return (
+      <div className="container">
      <BrowserRouter> 
      <Header />
 
@@ -28,7 +29,7 @@ function App() {
       </Routes>
       <Footer />
       </BrowserRouter>
-      
+      </div>
   );
 }
 export default App;

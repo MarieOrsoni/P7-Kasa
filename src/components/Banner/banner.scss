@@ -22,8 +22,6 @@
     
     }
    
-
-
 .bannerimg {
     height: 240px;
     width: 100%;
@@ -36,4 +34,30 @@
    
 }
 
+//media queries
+@media (max-width: 768px) {
+    .banner {
+        max-height: 160px;
+        margin-top: 20px;
+    }
+    .bannerimg {
+        max-height: 160px;
+
+    }
+}
+
+@media (max-width: 480px) {
+    .banner {
+        max-height: 110px;
+        margin-top: 10px;
+    }
+    .bannerimg {
+        max-height: 110px;
+    }
+    .banner p {
+        font-size: 24px;
+        text-align: left;
+        padding-left: 15px;
+    }
+}
 
