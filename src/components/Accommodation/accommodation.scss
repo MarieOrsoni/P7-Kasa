@@ -4,7 +4,7 @@
     max-width: 1240px;
     margin: 0 auto 20px;
     display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
   grid-template-rows: auto;
   gap: 20px;
 
@@ -13,7 +13,7 @@
 
 //Title and location
 .titles {
-    grid-column: 1 / 2;
+    grid-column: 1 / 4;
     grid-row: 1 / 2;
     h1 { 
     color: $red-maincolor;
@@ -25,15 +25,11 @@
         
     }
 }
-.host-info-rating {
-   grid-column: 2 / 3;
-   grid-row: 1 / 2;
-   display: flex;
-   flex-direction: column;
-   align-items: flex-end;
-}
+
 //Info host name and photo position in this component
 .host-info {
+    grid-column: 4 / 5;
+   grid-row: 1 / 2;
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -47,7 +43,8 @@
 
 //Rating - star ratings position in this component
 .rating-container {
-  margin-top: 30px;
+    grid-column: 4 / 5;
+    grid-row: 2 / 3;
   display: flex;
  justify-content: flex-end;
  align-items: center;
@@ -59,6 +56,7 @@
     grid-column: 1 / 3;
     grid-row: 2 / 3;
     margin-left: 0;
+    margin-bottom: 0;
     padding-left: 0;
     list-style: none;
     display: flex;
@@ -77,54 +75,31 @@
 
 //Dropdowns div position in this component
 .dropdown-list {
-    grid-column: 1 / 3;
+    grid-column: 1 / 5;
     grid-row: 3 / 4;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     gap: 5%;
+    width: 100%;
+    .dropdown {
+        width: 48%;
+    }
 
 }
 
 //media queries
-/*@media (max-width: 768px) {
-    .headers {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    .titles {
-        order: -1;
-        width: 100%;
-        h1 {
-            font-size: 18px;
-        }
-        p {
-            font-size: 14px;
-        }
-    }
-    .host-info {
-        order: 2;
-        margin-top: 1rem;
-    }
-    .rating-container {
-        order: 2;
-        margin-top: 0;
-    }
-    .tags {
-        order: 1;
-        margin-top: 1rem;
-    }
-
-}*/
-@media (max-width: 480px) {
-   
+@media (max-width: 768px) {
     .accommodation-details {
+       
+        display: grid;
+        max-width: 100%;
         margin-bottom: 0px;
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(250px, 1fr);
         grid-template-rows: auto auto auto auto;
+        box-sizing: border-box;
     }
-    .titles, .host-info-rating, .tags, .dropdown-list {
+    .titles, .host-info, .rating-container, .tags, .dropdown-list {
         grid-column: 1 / -1;
     }
     .titles {
@@ -139,23 +114,101 @@
     .tags { 
       grid-row: 2 / 3;
       order: 1;
-       
+        gap: 2%;
         li {
             font-size: 10px;
             white-space: nowrap;   
+            height: 14px;
+            padding: 8px 10px;
         }      
     }
-    .host-info-rating {
+    .rating-container {
+        grid-row: 3 / 4 ;
+        order: 2;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        margin-left: revert-layer;
+        
+    }
+    .host-info {
         grid-row: 3 / 4;
         order: 2;
         display: flex;
-        flex-direction: column;
+       flex-direction: row;
+       align-items: center;
+        width: 100%;
     }
-     
+        
     .dropdown-list {
         grid-row: 4 / 5;
         order: 3;
         flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+       
+    }
+}
+
+@media (max-width: 480px) {
+   
+    .accommodation-details {
+       
+        display: grid;
+        max-width: 100%;
+        margin-bottom: 0px;
+        grid-template-columns: minmax(250px, 1fr);
+        grid-template-rows: auto auto auto auto;
+        box-sizing: border-box;
+    }
+    .titles, .host-info, .rating-container, .tags, .dropdown-list {
+        grid-column: 1 / -1;
+    }
+    .titles {
+        grid-row: 1 / 2;
+        h1 {
+            font-size: 18px;
+        }
+        p {
+            font-size: 14px;
+        }
+    }
+    .tags { 
+      grid-row: 2 / 3;
+      order: 1;
+    gap: 2%;
+        li {
+            font-size: 10px;
+            white-space: nowrap;   
+            height: 14px;
+            padding: 8px 10px;
+        }      
+    }
+    .rating-container {
+        grid-row: 3 / 4 ;
+        order: 2;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        margin-left: revert-layer;
+        
+    }
+    .host-info {
+        grid-row: 3 / 4;
+        order: 2;
+        display: flex;
+       flex-direction: row;
+       align-items: center;
+        width: 100%;
+    }
+        
+    .dropdown-list {
+        grid-row: 4 / 5;
+        order: 3;
+        flex-direction: column;
+        justify-content: space-between;
         width: 100%;
        
     }

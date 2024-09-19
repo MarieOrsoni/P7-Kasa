@@ -47,6 +47,7 @@ function AccommodationDetails() {
 );
       
     return (
+       
               <div className="accommodation-details">
                 
                 <div className="titles">
@@ -54,22 +55,19 @@ function AccommodationDetails() {
                     <p>{property.location}</p>
                 </div>
 
-                <div className="host-info-rating">
-                  <HostInfo fullName={property.host.name} picture={property.host.picture} />
-                  <Rating rating={property.rating} />
-                </div>
+                <HostInfo fullName={property.host.name} picture={property.host.picture} />
 
-                
+                <Rating rating={property.rating} />
                     
                     <ul className="tags">{listItems}</ul> 
-                    
-                    
-                    <div className="dropdown-list">
+   
+                <div className="dropdown-list">
                     <DropdownDescription />
                     <DropdownEquipments />
                     </div>                
                 
                 </div>
+                
             );
 }
 export default AccommodationDetails;

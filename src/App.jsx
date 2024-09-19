@@ -8,12 +8,11 @@ import PortfolioGallery from "./components/Portfolio/index.jsx";
 import PropertyDetails from "./pages/Accommodation/index.jsx";
 
 
-
 import './styles/App.scss'
 
 function App() {
   return (
-      <div className="container">
+      <div className=".main-container">
      <BrowserRouter> 
      <Header />
 

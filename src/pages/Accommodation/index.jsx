@@ -8,9 +8,7 @@ function PropertyDetails() {
     return (
         <main>
             <Carousel />
-        
             <AccommodationDetails />
-        
         </main>
     )
 }

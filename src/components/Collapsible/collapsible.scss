@@ -59,7 +59,19 @@
 }
 //media queries
 @media (max-width: 768px) {
-
+.collapsible__header {
+  font-size: 15px;
+  height: 35px;
+  width: 100%;
+}
+.collapsible-list {
+    p, li {
+    font-size: 15px;
+  }  
+}
+.collapsible__header--active {
+  width: 100%;
+}
 }
 @media (max-width: 480px) {
   .collapsible__header {
