@@ -1,72 +1,96 @@
 @import '../../styles/variables.scss';
 
 .carousel {
-    height: 415px;
-    position: relative;
-    max-width: 1240px;
-    margin-left: auto;
-    margin-right: auto;
-   // margin-top: 50px;
-   // margin-bottom: 20px;
-    text-align: center;
-   
+	height: 415px;
+	position: relative;
+	max-width: 1240px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+
 }
+
 .carousel_content {
-position: relative;
+	position: relative;
 }
+
 .pictures {
-    height: 415px;
-    width: 100%;
-    object-fit: cover;
-    border-radius: 25px;
-    position: relative;
+	height: 415px;
+	width: 100%;
+	object-fit: cover;
+	border-radius: 25px;
+	position: relative;
 }
+
 .arrow {
-    position: absolute;
-    top: 40%;
-    height: 80px;
-    cursor: pointer;
-    z-index: 1;
-    
+	position: absolute;
+	top: 40%;
+	height: 80px;
+	cursor: pointer;
+	z-index: 1;
+
 }
+
 .arrow_right {
-    right:10px;
+	right: 10px;
 }
+
 .arrow_left {
-    left: 10px;
+	left: 10px;
 }
-.page_numbers{
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    color: $white-theme;
-    font-size: 18px;
-   
+
+.page_numbers {
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	color: $white-theme;
+	font-size: 18px;
+
 }
-@media (max-width: 768px){
+//media queries
+/* For medium tablets */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
     .carousel {
-        height: 300px;
+        height: 380px;
     }
     .pictures {
-        height: 300px;
+        height: 380px;
     }
     .arrow {
         height: 40px;
-    }
+        }
+    
+}
+@media (max-width: 768px) {
+	.carousel {
+		height: 300px;
+	}
+
+	.pictures {
+		height: 300px;
+	}
+
+	.arrow {
+		height: 40px;
+	}
 
 }
-@media (max-width: 480px){
-    .carousel {
-        margin-top: 10px;
-        height: 255px;
-    }
-    .pictures {
-        height: 255px;
-    }
-    .arrow {
-    height: 40px;
-    }
-    .page_numbers {
-        display: none;
-    }
+
+@media (max-width: 480px) {
+	.carousel {
+		margin-top: 10px;
+		height: 255px;
+	}
+
+	.pictures {
+		height: 255px;
+	}
+
+	.arrow {
+		height: 40px;
+	}
+
+	.page_numbers {
+		display: none;
+	}
 }

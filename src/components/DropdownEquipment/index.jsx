@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import './dropdown.scss';
 import CollapsibleList from '../Collapsible/index.jsx';
 
 //Dropdown list of equipment
@@ -8,7 +7,6 @@ import CollapsibleList from '../Collapsible/index.jsx';
 const DropdownEquipments = () => {
     const { id } = useParams();
     const [options, setOptions] = useState([]);
-   // const [isOpen, setIsOpen] = useState(false);
     const [error, setError] = useState(null);
 
     useEffect(() => {
@@ -24,7 +22,6 @@ const DropdownEquipments = () => {
              //   console.log('Fetched data:', data); // Log the fetched data
                 const property = data.find(item => item.id === id);
                 if (property && property.equipments) {
-                 //   console.log('Equipments:', property.equipments); // Log the equipments array
                     setOptions(property.equipments);
                 } else {
                     console.warn('No equipments found for the property with id:', id);
@@ -36,9 +33,7 @@ const DropdownEquipments = () => {
             });
     }, [id]);
 
-   // const toggleDropdown = () => setIsOpen(!isOpen);
-
-    if (error) {
+      if (error) {
         return <div>Error loading data: {error.message}</div>;
     }
 
@@ -57,7 +52,6 @@ const DropdownEquipments = () => {
               
             )}
     
-
 
 export default DropdownEquipments;
 

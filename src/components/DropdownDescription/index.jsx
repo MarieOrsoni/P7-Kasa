@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import '../DropdownEquipment/dropdown.scss';
 import CollapsibleList from '../Collapsible/index.jsx';
 
 //Dropdown description
@@ -8,7 +7,6 @@ import CollapsibleList from '../Collapsible/index.jsx';
 const DropdownDescription = () => {
     const { id } = useParams();
     const [description, setDescription] = useState('');
-    //const [isOpen, setIsOpen] = useState(false);
     const [error, setError] = useState(null);
 
     useEffect(() => {
@@ -20,7 +18,6 @@ const DropdownDescription = () => {
                 return response.json();
             })
             .then(data => {
-             //   console.log('Fetched data:', data); // Log the fetched data
                 const property = data.find(item => item.id === id);
                 if (property && property.description) {
                     
@@ -35,8 +32,7 @@ const DropdownDescription = () => {
             });
     }, [id]);
 
-  //  const toggleDropdown = () => setIsOpen(!isOpen);
-
+  
     if (error) {
         return <div>Error loading data: {error.message}</div>;
     }

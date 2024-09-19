@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import './error.scss';
 
-function Error () {
+function Error404 () {
     return ( 
     <div className="error">
     <h1>404</h1>
@@ -12,4 +12,4 @@ function Error () {
     </div>
     );
 }
-export default Error;
+export default Error404;

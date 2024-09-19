@@ -1,4 +1,4 @@
-import './aboutus.scss';
+import './about-us.scss';
 import CollapsibleList from '../Collapsible/index.jsx';
 
 function OurValues() {
