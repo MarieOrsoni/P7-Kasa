@@ -1,4 +1,3 @@
-
 @import './variables.scss';
 
 body {
@@ -25,23 +24,23 @@ main {
     margin-left: auto;
     margin-right: auto;
     width: 100%;
-    //min-height: calc(100vh - 209px); /* Adjust based on footer height */
 }
+
 h1 {
     font-family: Montserrat;
-font-size: 36px;
-font-weight: 500;
+    font-size: 36px;
+    font-weight: 500;
 }
+
 p {
     font-size: 18px;
     font-weight: 500;   
-    }
+}
+
 li {
     list-style: none;
 
 }
-
-
 
 //media queries
 
@@ -56,7 +55,7 @@ li {
  }
 @media (max-width: 768px) {
     main {
-        max-width: 600px; // Adjust as needed for tablets
+        max-width: 600px; 
     }
     .header {
         max-width: 600px;

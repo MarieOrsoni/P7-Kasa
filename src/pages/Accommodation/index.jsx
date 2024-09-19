@@ -10,6 +10,6 @@ function PropertyDetails() {
             <Carousel />
             <AccommodationDetails />
         </main>
-    )
+    );
 }
 export default PropertyDetails;

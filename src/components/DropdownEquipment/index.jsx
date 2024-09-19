@@ -50,8 +50,7 @@ const DropdownEquipments = () => {
                 )}
                 </CollapsibleList>
               
-            )}
-    
+            )} 
 
 export default DropdownEquipments;
 

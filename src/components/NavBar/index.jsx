@@ -1,8 +1,6 @@
 import { NavLink } from "react-router-dom";
 import './navbar.scss';
 
-
-
 function NavBar() {
     return ( 
         <nav className="navbar">
@@ -15,8 +13,8 @@ function NavBar() {
             <NavLink className={({ isActive }) => isActive ? "navbar__links active" : "navbar__links"}
             to="/about-us"
             >
-                A Propos 
-                </NavLink>  
+            A Propos 
+            </NavLink>  
         </nav>
    
     );

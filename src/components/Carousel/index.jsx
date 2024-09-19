@@ -1,6 +1,6 @@
+import { useEffect, useState } from "react";
 import arrow_left from "../../assets/arrow_left.png";
 import arrow_right from "../../assets/arrow_right.png";
-import { useEffect, useState } from "react";
 import "./carousel.scss"
 
 //Carousel

@@ -1,5 +1,5 @@
-import './banner.scss';
 import PropTypes from 'prop-types';
+import './banner.scss';
 
 function Banner ({ imageSrc, altText, children }) {
     return (
@@ -10,7 +10,6 @@ function Banner ({ imageSrc, altText, children }) {
         </div>
     );
 }
-
 
 Banner.propTypes = {
     imageSrc: PropTypes.string.isRequired,

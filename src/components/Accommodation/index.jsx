@@ -2,13 +2,12 @@
 //Data extracted from the json file for the selected property 
 
 import { useState, useEffect} from "react";
-import Rating from "../Ratings";
 import { useParams, useNavigate } from 'react-router-dom';
-import './accommodation.scss';
-
 import DropdownEquipments from "../DropdownEquipment";
 import DropdownDescription from "../DropdownDescription";
+import Rating from "../Ratings";
 import HostInfo from "../Host-info";
+import './accommodation.scss';
 
 function AccommodationDetails() {
     const { id } = useParams();

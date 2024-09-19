@@ -18,12 +18,10 @@
 	h1 {
 		color: $red-maincolor;
 		margin: 10px 0;
-
 	}
 
 	p {
 		margin: 0;
-
 	}
 }
 
@@ -106,6 +104,11 @@
             font-size: 14px;
         }
     }
+    .tags {
+            grid-column: 1 / 5;
+            grid-row: 2 / 3;
+        }
+    
 }
 //Larger mobile screens
 @media (max-width: 768px) {

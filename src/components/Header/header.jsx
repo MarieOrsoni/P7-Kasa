@@ -6,11 +6,8 @@ function Header() {
     return ( 
 
     <header className="header">
-       
-       <img className="logo" src={Logo} alt="Kasa logo"/>  
-    
-        <NavBar />
-         
+            <img className="logo" src={Logo} alt="Kasa logo"/>  
+            <NavBar />  
     </header>
     );
 }

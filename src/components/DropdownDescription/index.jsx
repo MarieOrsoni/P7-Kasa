@@ -43,12 +43,11 @@ const DropdownDescription = () => {
                         <p className='dropdown-item'>{description}</p>
                     ) : (
                         <p className='dropdown-item'>No description available</p>
-                    )}
-                
+                    )}  
         
              {error && <p>Error: {error.message}</p>}
         </CollapsibleList>
-    )
+    );
 }
 
 export default DropdownDescription;

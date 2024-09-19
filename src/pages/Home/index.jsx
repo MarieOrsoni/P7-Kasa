@@ -5,17 +5,12 @@ import PortfolioGallery from "../../components/Portfolio";
 
 function Home() {
     return ( 
-    <main>
-    <Banner imageSrc={imagesource1} altText="paysage cotier">
-    <p>Chez vous, partout et ailleurs</p>
-    </Banner> 
-
-    <PortfolioGallery />
-   
-    
-    </main>
-   
-
-    );  
+        <main>
+            <Banner imageSrc={imagesource1} altText="paysage cotier">
+                <p>Chez vous, partout et ailleurs</p>
+            </Banner> 
+            <PortfolioGallery />
+        </main>
+     );  
 }
 export default Home;
