@@ -1,8 +1,8 @@
-import PropTypes from 'prop-types';
-import './host-info.scss';
+import PropTypes from "prop-types";
+import "./host-info.scss";
 
 const HostInfo = ({ fullName, picture }) => {
-  const name = fullName ? fullName.split(' ') : [' '];
+  const name = fullName ? fullName.split(" ") : [" "];
 
   return (
     <div className="host-info">

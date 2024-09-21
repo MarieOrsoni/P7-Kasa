@@ -1,50 +1,50 @@
 .header {
-	position: relative;
-	display: flex;
-	max-width: 1240px;
-	width: 100%;
-	margin-left: auto;
-	margin-right: auto;
-	justify-content: flex-end;
-	align-items: center;
-	justify-content: space-between;
-	margin-bottom: 30px;
-	margin-top: 30px;
+  position: relative;
+  display: flex;
+  max-width: 1240px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: flex-end;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  margin-top: 30px;
 }
 
 .header-inner {
-	display: flex;
-	width: 100%;
-	max-width: 1240px;
-	margin-left: auto;
-	margin-right: auto;
-	justify-content: flex-end;
-	align-items: center;
+  display: flex;
+  width: 100%;
+  max-width: 1240px;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .logo {
-	height: 68px;
+  height: 68px;
 }
 
-//media queries 
+//media queries
 /* For medium tablets */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
-    .logo {
-        height: 58px;
-    }
+  .logo {
+    height: 58px;
+  }
 }
 @media (max-width: 768px) {
-	.logo {
-		max-height: 46px;
-	}
+  .logo {
+    max-height: 46px;
+  }
 }
 
 @media (max-width: 480px) {
-	.header {
-		max-width: 335px;
-	}
+  .header {
+    max-width: 335px;
+  }
 
-	.logo {
-		max-height: 36px;
-	}
+  .logo {
+    max-height: 36px;
+  }
 }

@@ -1,71 +1,69 @@
-@import './variables.scss';
+@import "./variables.scss";
 
 body {
-    font-family: 'Montserrat', sans-serif; 
-    margin-top: 50px;
-    height: 100%;
-    font-size: 16px;
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    padding: 0;
-    
+  font-family: "Montserrat", sans-serif;
+  margin-top: 50px;
+  height: 100%;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
 }
 .main-container {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 main {
-    flex: 1;
-    max-width: 1240px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
+  flex: 1;
+  max-width: 1240px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
 }
 
 h1 {
-    font-family: Montserrat;
-    font-size: 36px;
-    font-weight: 500;
+  font-family: Montserrat;
+  font-size: 36px;
+  font-weight: 500;
 }
 
 p {
-    font-size: 18px;
-    font-weight: 500;   
+  font-size: 18px;
+  font-weight: 500;
 }
 
 li {
-    list-style: none;
-
+  list-style: none;
 }
 
 //media queries
 
 /* For medium tablets */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
-    main {
-        max-width: 750px;
-    }
-    .header {
-        max-width: 750px;
-    }
- }
+  main {
+    max-width: 750px;
+  }
+  .header {
+    max-width: 750px;
+  }
+}
 @media (max-width: 768px) {
-    main {
-        max-width: 600px; 
-    }
-    .header {
-        max-width: 600px;
-    }
+  main {
+    max-width: 600px;
+  }
+  .header {
+    max-width: 600px;
+  }
 }
 @media (max-width: 480px) {
-    main {
-        max-width: 335px;
-    }
-    .header {
-        max-width: 335px;
-    }
+  main {
+    max-width: 335px;
+  }
+  .header {
+    max-width: 335px;
+  }
 }

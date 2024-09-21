@@ -8,7 +8,6 @@ ctr + C then select: y (yes)
 
 Note: Vite does not use Switch but Routes and Links.
 
-
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:

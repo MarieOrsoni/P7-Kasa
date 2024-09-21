@@ -3,17 +3,17 @@ import RouterComponent from "./components/Router/index.jsx";
 import Header from "./components/Header/header.jsx";
 import Footer from "./components/Footer/index.jsx";
 
-import './styles/App.scss'
+import "./styles/App.scss";
 
 function App() {
   return (
-      <div className="main-container">
-     <Router> 
-          <Header />
-          <RouterComponent />
-          <Footer />
+    <div className="main-container">
+      <Router>
+        <Header />
+        <RouterComponent />
+        <Footer />
       </Router>
-      </div>
+    </div>
   );
 }
 export default App;

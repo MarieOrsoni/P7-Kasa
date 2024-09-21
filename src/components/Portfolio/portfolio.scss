@@ -1,73 +1,72 @@
-@import '../../styles/variables.scss';
+@import "../../styles/variables.scss";
 
 .gallery {
-	max-width: 1200px;
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	gap: 10px;
-	margin: 0 auto;
-	padding: 20px;
-	background: rgba(246, 246, 246, 1);
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin: 0 auto;
+  padding: 20px;
+  background: rgba(246, 246, 246, 1);
 
-	border-radius: 25px;
-	margin-top: 50px;
-	margin-bottom: 50px;
+  border-radius: 25px;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 .card {
-	position: relative;
-	padding: 20px;
+  position: relative;
+  padding: 20px;
 }
 
 .card img {
-	position: relative;
-	height: 340px;
-	max-width: 100%;
-	border-radius: 10px;
-	object-fit: cover;
+  position: relative;
+  height: 340px;
+  max-width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
 }
 
 .card p {
-	position: absolute;
-	bottom: 30px;
-	left: 40px;
-	text-align: left;
-	font-size: 18px;
-	font-weight: 700;
-	width: 70%;
-	color: $white-theme;
+  position: absolute;
+  bottom: 30px;
+  left: 40px;
+  text-align: left;
+  font-size: 18px;
+  font-weight: 700;
+  width: 70%;
+  color: $white-theme;
 }
 
 //media queries
 @media (max-width: 768px) {
-    .gallery {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 0;
-    }
-    .card img {
-        height: 300px;
-    }
-
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+  }
+  .card img {
+    height: 300px;
+  }
 }
 
 @media (max-width: 480px) {
-	.gallery {
-		background: none;
-		max-width: 335px;
-		grid-template-columns: 1fr;
-		padding: 0;
-		margin-top: 20px;
-	}
+  .gallery {
+    background: none;
+    max-width: 335px;
+    grid-template-columns: 1fr;
+    padding: 0;
+    margin-top: 20px;
+  }
 
-	.card {
-		padding: 0;
+  .card {
+    padding: 0;
 
-		p {
-			bottom: 20px;
-		}
-	}
+    p {
+      bottom: 20px;
+    }
+  }
 
-	.card img {
-		height: 255px;
-	}
+  .card img {
+    height: 255px;
+  }
 }
