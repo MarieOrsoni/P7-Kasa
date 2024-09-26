@@ -4,7 +4,7 @@
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import DropdownEquipments from "../DropdownEquipment";
-import DropdownDescription from "../DropdownDescription";
+import DropdownDescription from "../Dropdown-description";
 import Rating from "../Ratings";
 import HostInfo from "../Host-info";
 import "./accommodation.scss";

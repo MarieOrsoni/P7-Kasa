@@ -51,14 +51,16 @@ li {
     max-width: 750px;
   }
 }
+/*medium size mobile screen max width 768px*/
 @media (max-width: 768px) {
   main {
-    max-width: 600px;
+    max-width: 500px;
   }
   .header {
-    max-width: 600px;
+    max-width: 500px;
   }
 }
+/*Small size mobile phones max width 480px*/
 @media (max-width: 480px) {
   main {
     max-width: 335px;
