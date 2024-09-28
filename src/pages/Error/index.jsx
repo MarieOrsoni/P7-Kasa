@@ -1,10 +1,10 @@
-import Error from "../../components/Error/index.jsx";
+import Error404 from "../../components/Error/index.jsx";
 
-function Error404() {
+function Error() {
   return (
     <main>
-      <Error />
+      <Error404 />
     </main>
   );
 }
-export default Error404;
+export default Error;

@@ -19,21 +19,21 @@
 
 //media queries
 /* For medium tablets */
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
+@media (max-width: 1024px) {
   .navbar a {
     font-size: 20px;
   }
 }
 @media (max-width: 768px) {
   .navbar a {
-    font-size: 18px;
+    font-size: 20px;
     padding-left: 30px;
   }
 }
 
 @media (max-width: 480px) {
   .navbar a {
-    font-size: 18px;
+    font-size: 16px;
     padding-left: 20px;
   }
 }

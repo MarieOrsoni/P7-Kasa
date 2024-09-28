@@ -3,7 +3,8 @@
 
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import DropdownEquipments from "../DropdownEquipment";
+import Carousel from "../Carousel";
+import DropdownEquipments from "../Dropdown-equipment";
 import DropdownDescription from "../Dropdown-description";
 import Rating from "../Ratings";
 import HostInfo from "../Host-info";
@@ -45,11 +46,15 @@ function AccommodationDetails() {
 
   return (
     <div className="accommodation-details">
+       <div className="Carousel">
+      <Carousel pictures={property.pictures} />
+      </div>
+      
       <div className="titles">
         <h1>{property.title}</h1>
         <p>{property.location}</p>
       </div>
-
+      
       <HostInfo fullName={property.host.name} picture={property.host.picture} />
 
       <Rating rating={property.rating} />

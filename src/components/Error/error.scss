@@ -24,3 +24,35 @@
   font-size: 18px;
   color: black;
 }
+//Media queries
+@media (max-width: 768px) {
+  .error {
+    h1 {
+      font-size: 200px;
+      padding: 20px
+    }
+    p {
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
+    .alink {
+      font-size: 14px;
+    }
+  }
+}
+@media (max-width: 480px) {
+  .error {
+    h1 {
+      font-size: 96px;
+      padding: 30px;
+    }
+    p {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+
+  }
+  .alink {
+    font-size: 14px;
+  }
+}

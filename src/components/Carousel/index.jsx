@@ -1,33 +1,24 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import PropTypes from "prop-types";
 import arrow_left from "../../assets/arrow_left.png";
 import arrow_right from "../../assets/arrow_right.png";
 import "./carousel.scss";
 
 //Carousel
 
-const Carousel = () => {
+const Carousel = ({ pictures }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [pictures, setPictures] = useState([]);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch("/Properties1.json");
-        const result = await response.json();
-        setPictures(result[0].pictures);
-      } catch (error) {
-        console.log("Error fetching properties1:", error);
-      }
-    };
-    fetchData();
-  }, []);
-
+  if (!pictures || pictures.length === 0) {
+    return <div>No pictures available</div>;
+  }
+  
   const nextSlide = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % pictures.length);
   };
+
   const prevSlide = () => {
     setCurrentIndex(
-      (prevIndex) => (prevIndex - 1 + pictures.length) % pictures.length,
+      (prevIndex) => (prevIndex - 1 + pictures.length) % pictures.length
     );
   };
 
@@ -47,9 +38,11 @@ const Carousel = () => {
           src={pictures[currentIndex]}
           alt={`Slide ${currentIndex + 1}`}
         />
-        <div className="page_numbers">
-          {currentIndex + 1} / {pictures.length}
-        </div>
+        {pictures.length > 1 && (
+          <div className="page_numbers">
+            {currentIndex + 1} / {pictures.length}
+          </div>
+        )}
       </div>
       {pictures.length > 1 && (
         <img
@@ -62,4 +55,10 @@ const Carousel = () => {
     </div>
   );
 };
+
+// Define PropTypes
+Carousel.propTypes = {
+  pictures: PropTypes.arrayOf(PropTypes.string).isRequired,
+};
+
 export default Carousel;
