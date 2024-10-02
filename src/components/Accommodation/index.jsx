@@ -62,8 +62,10 @@ function AccommodationDetails() {
       <ul className="tags">{listItems}</ul>
 
       <div className="dropdown-list">
-        <DropdownDescription />
-        <DropdownEquipments />
+        <DropdownDescription description={property.description} />
+        {property.equipments && (
+          <DropdownEquipments options={property.equipments} />
+        )}
       </div>
     </div>
   );

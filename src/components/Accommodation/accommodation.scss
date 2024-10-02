@@ -66,7 +66,8 @@
   list-style: none;
   display: flex;
   gap: 20px;
-
+  white-space: nowrap;
+  text-align: center;
   margin-top: 0;
 
   li {
@@ -104,6 +105,15 @@
   .tags {
     grid-column: 1 / 5;
     grid-row: 4 / 3;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    max-width: 100%;
+    li {
+      font-size: 13px;
+      display: flex;
+      justify-content: center;
+      padding: 10px 25px;
+    }
   }
 }
 //Larger mobile screens
@@ -139,11 +149,15 @@
   .tags {
     grid-row: 3 / 4;
     order: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
     gap: 2%;
+    row-gap: 5px;
     li {
       white-space: nowrap;
+      font-size: 12px;
     }
-    }
+  }
 
   .rating-container {
     grid-row: 4 / 5;
@@ -193,7 +207,7 @@
 
   .titles {
     grid-row: 2 / 3;
-   
+
     h1 {
       font-size: 20px;
       margin-top: 0;
@@ -208,11 +222,14 @@
     grid-row: 3 / 4;
     order: 1;
     gap: 2%;
+    row-gap: 5px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
 
     li {
       font-size: 10px;
       white-space: nowrap;
-      padding: 8px
+      padding: 8px;
     }
   }
 
